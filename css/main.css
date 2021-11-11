@@ -50,14 +50,60 @@ Header section
   background-color: rgb(243, 95, 69); 
   border: none;
   color: white;
+  box-shadow: 3px 3px;
+
 }
 
 .header-btn:hover{
+  background-color: rgb(218, 96, 74); 
+  border: none;
+  color: white;
+  box-shadow: none;
+  box-shadow: none;
+}
+
+/****************** ********* ********* ********* ********* *********  
+About section
+*************************** ********* ********* ********* ********* **/
+#about-us {
+  padding: 100px 0px;
+  background: #F6F6F6;
+}
+#about-us .block {
+  text-align: center;
+}
+#about-us .block p {
+  color: #959595;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 40px 0px;
+}
+
+#about-us img{
+  width: 50%;
+}
+
+.btn-outline{
+  margin: auto;
+  align-self: center;
+  width: 100px;
+  height: 30px;
+  align-content: center;
+  text-align: center;
+  padding: auto;
+  margin-bottom: 1rem;
+  border: 1px solid rgb(243, 95, 69); 
+  color:rgb(243, 95, 69);  
+  box-shadow: 2px 2px;
+}
+
+.btn-outline:hover{
   background-color: whitesmoke;
   color:tomato;
   font-weight:bold;
-  border-bottom: 4px solid rgb(245, 95, 69);
+  box-shadow: none;
 }
+
 
 /****************** ********* ********* ********* ********* *********  
 Form section
@@ -100,6 +146,10 @@ Form section
   align-self: center;
 }
 
+.form-img-sm{
+  width: 300px;
+  float: right;
+}
 .form-btn{
   margin: auto;
   align-self: center;
@@ -165,6 +215,9 @@ h1 {
 h2 {
   font-size: 24px;
   font-weight: 500;
+  width: fit-content;
+  padding-bottom: 4px;
+  border-bottom: 2px double tomato;
 }
 h3 {
   font-size: 20px;
