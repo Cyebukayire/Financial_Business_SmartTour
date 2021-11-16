@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>SmarTour App</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- CSS
+        ================================================ -->
+
+        <!-- bootstrap.min css -->
+		<link rel="stylesheet" href="{% static 'style/bootstrap.min.css' %}">
+        <!-- Font-awesome.min css -->
+		<link rel="stylesheet" href="{% static 'style/font-awesome.min.css' %}">
+
+		<link rel="stylesheet" href="{% static 'style/main.css' %}">
+	</head>
+	<body>
+        <a  class="btn btn-default btn-sm header-btn" href="{% url 'home' %}">
+            Back
+        </a>
+        <section id="form-section">
+            <div class="container py-4">
+                <div class="row">
+                <div class="col-lg-6 text-center py-4 m-auto">
+
+                <!--Result Display -->
+                <div class="info-card row shadow-lg">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-sm-6 col-xs-6">
+                        <img src="{% static 'images/undraw_wallet_aym5.svg' %}" class="form-img">
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-sm-6 col-xs-6">
+                        <div class="text-area">
+                            <h3>You are likely to spend: </h3>
+                            <br>
+                            <h3>N {{pred}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="block" >
+                    <p class="text-muted" style="padding: 1rem; margin-top: 2px; width: 90%; text-align: center; margin: auto; margin-top: 2rem;">Going to a tourist attraction? Find out how much you are likely to spend there.</p>
+                    <a class="btn btn-outline" href="survey2.html">Survey 2</a> 
+                </div>
+                </div>
+
+
+            </div><!-- .row close -->
+        </div><!-- .container close -->
+    </section><!-- #form-section close -->
+
+    <!--footer-bottom  start
+    ============================= -->
+    <footer id="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="block">
+                        <p>A She Code Africa Project &copy; 2021 - All Rights Reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+	</body>
+</html>
