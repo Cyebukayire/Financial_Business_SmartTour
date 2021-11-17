@@ -83,6 +83,9 @@ About section
   width: 50%;
 }
 
+#about-us p{
+  padding: 5px;
+}
 .btn-outline{
   margin: auto;
   align-self: center;
@@ -103,7 +106,43 @@ About section
   font-weight:bold;
   box-shadow: none;
 }
+/*      HERE    TO LINE 146 */
+/*Slideshow*/
+.mySlides{
+  display: none;
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 4px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
 /****************** ********* ********* ********* ********* *********  
 Form section
