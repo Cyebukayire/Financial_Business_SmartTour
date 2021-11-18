@@ -42,7 +42,7 @@ Header section
 }
 
   
-.header-btn{
+.header-btn-1{
   margin: auto;
   align-self: center;
   width: 150px;
@@ -51,17 +51,39 @@ Header section
   border: none;
   color: white;
   box-shadow: 3px 3px;
+  margin-right: 1rem;
 
 }
 
-.header-btn:hover{
+.header-btn-2{
+  margin: auto;
+  align-self: center;
+  width: 150px;
+  margin-bottom: 1rem;
+  border: none;
+  color: white;
+  background-color: rgb(168, 119, 110);
+  box-shadow: 3px 3px;
+
+}
+
+.header-btn-1:hover{
   background-color: rgb(218, 96, 74); 
   border: none;
   color: white;
+  font-weight: bold;
   box-shadow: none;
   box-shadow: none;
 }
 
+.header-btn-2:hover{
+  background-color: rgb(139, 100, 93); 
+  border: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: none;
+  box-shadow: none;
+}
 /****************** ********* ********* ********* ********* *********  
 About section
 *************************** ********* ********* ********* ********* **/
@@ -106,12 +128,11 @@ About section
   font-weight:bold;
   box-shadow: none;
 }
-/*      HERE    TO LINE 146 */
-/*Slideshow*/
+/********************Slideshow*/
 .mySlides{
   display: none;
 }
-/* The dots/bullets/indicators */
+/* The dots indicators */
 .dot {
   height: 15px;
   width: 15px;
@@ -129,18 +150,18 @@ About section
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 4s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 4s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .8} 
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .8} 
   to {opacity: 1}
 }
 
@@ -179,9 +200,10 @@ Form section
   padding-top: 5rem;
 }
 .form-img{
-  width: 90%; 
+  width: 100%; 
   padding: 15px;  
-  margin-top: 15px; 
+  margin-top:auto;
+  margin-bottom: auto;
   align-self: center;
 }
 

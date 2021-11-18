@@ -10,12 +10,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- CSS
         ================================================ -->
-
+    <!-- bootstrap. css -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <!-- bootstrap.min css -->
 		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <!-- Font-awesome.min css -->
 		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-
+        <!-- custom styling-->
 		<link rel="stylesheet" href="{% static 'css/main.css' %}">
 	</head>
 	<body>
@@ -29,9 +30,12 @@
                 <div class="col-md-12">
                     <div class="block">
                         <h1 class="heading">SmartTour</h1>
-                        <p>Travelling in or to <b>Nigeria</b> on vacation soon? reprehenderit quidem obcaecat0i error?
-                        <br>About SmartTour Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, animi?</p>
-                        <a  class="btn btn-default btn-lg header-btn" href="#about-us">
+                        <p>Traveling in or to Nigeria on vacation soon? Not sure how much you will be spending?<br> Let SmartTour’s predictive model help you set your budget <br> by telling you how much you are likely to spend on your next adventure.  
+                        </p>
+                        <a  class="btn btn-default btn-lg header-btn-1 mx-2" href="Features/tourist">
+                            Yes, please!
+                        </a>
+                        <a  class="btn btn-default btn-lg header-btn-2" href="#about-us">
                             Learn more
                         </a>
                     </div>
@@ -47,36 +51,63 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
-                        <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" ><span>Get your wallet ready  
+                        <h1 class="heading"  ><span>Get your wallet ready  
                         </h1>
-                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim </br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </br>voluptate velit esse cillum dolore eu fugiat nullapariatur. Excepteur sint occaecat</p> 
+                        <p>
+                            In Nigeria, tourism is centered around activities happening in the country such as festivals. <br>Attractions such as parks, cultural sites, and Natural sites also contribute ti tourism in the country. the benefits of tourism to the country as well as to the individual cannot be overemphasized, though there is the challenge of having suffiecient information regarding the tourism in Nigeria.
+                            <br>
+                            SmartTour app is a platform designed to enable toourists to make financial decisions by predicting how much they are likely to spend on a tour in Nigeria using machine learning.
+
+                        </p> 
                     </div>
-                    <!--HERE TO LINE 76-->
-                    <div class="row">
+                    <div class="row" id="slideset">
                         <!--slideshow img 1-->
                         <div class="col-12 mySlides fade text-center">
-                            <img src="{% static 'images/kayak.jpg' %}" alt="bus-img">
+                            <img src="{% static 'images/slider1.jpg' %}" alt="slider1">
                         </div>
                         <!--slideshow img 2-->
                         <div class="col-12 mySlides fade text-center">
-                            <img src="{% static 'images/travel.jpg' %}" alt="bus-img">
+                            <img src="{% static 'images/slider6.jpg' %}" alt="slider2">
                         </div>
                         <!--slideshow img 3-->
                         <div class="col-12 mySlides fade text-center">
-                            <img src="{% static 'images/bg-bus.jpg' %}" alt="bus-img">
+                            <img src="{% static 'images/slider3.jpg' %}" alt="slider3">
                         </div>
-                        <div style="text-align:center">
+                         <!--slideshow img 4-->
+                        <div class="col-12 mySlides fade text-center">
+                            <img src="{% static 'images/slider4.jpg' %}" alt="slider4">
+                        </div>
+                        <!--slideshow img 5-->
+                        <div class="col-12 mySlides fade text-center">
+                            <img src="{% static 'images/slider5.jpg' %}" alt="slider5">
+                        </div>
+                         <!--slideshow img 6-->
+                        <div class="col-12 mySlides fade text-center">
+                            <img src="{% static 'images/slider2.jpg' %}" alt="slider6">
+                        </div>
+                         <!--slideshow img 7-->
+                         <div class="col-12 mySlides fade text-center">
+                            <img src="{% static 'images/slider7.jpg' %}" alt="slider7">
+                        </div>
+
+                        <div style="text-align:center; margin: 4px;">
+                            <span class="dot"></span> 
+                            <span class="dot"></span> 
+                            <span class="dot"></span> 
+                            <span class="dot"></span> 
                             <span class="dot"></span> 
                             <span class="dot"></span> 
                             <span class="dot"></span> 
                         </div>
                         <div class="col-12 text-center">
-                            <p class="text-muted">Travelling to a state in Nigeria on holiday?</p>
-                            <a class="btn btn-outline" href="Features/tourist">Survey 2</a>                            
+                            <p class="text-muted">Find out how much you are spending on your next Nigerian adventure</p>
+                            <a class="btn btn-outline" href="Features/tourist">Find out</a>                            
                         </div>
 
                     </div>
                 </div><!-- .col-md-12 close -->
+
+
             </div><!-- .row close -->
         </div><!-- .container close -->
     </section>

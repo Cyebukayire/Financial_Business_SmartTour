@@ -10,16 +10,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- CSS
         ================================================ -->
-
-        <!-- bootstrap.min css -->
-		<link rel="stylesheet" href="{% static 'style/bootstrap.min.css' %}">
-        <!-- Font-awesome.min css -->
-		<link rel="stylesheet" href="{% static 'style/font-awesome.min.css' %}">
-
-		<link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <!-- bootstrap. css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Font-awesome.min css -->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <!-- custom styling-->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    
 	</head>
 	<body>
-        <a  class="btn btn-default btn-sm header-btn" href="{% url 'home' %}">
+        <a  class="btn btn-default btn-sm header-btn-2" href="{% url 'home' %}">
             Back
         </a>
 
@@ -29,38 +31,81 @@
     <section id="form-section">
         <div class="container py-4">
             <div class="row">
-                <div class="col-lg-6 mx-auto">
-                    <div class="block border">
-                        <h3 class="title">Lorem, ipsum dolor.<span>Survey1</span> </h3>
-                        <form action="{% url 'result' %}">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="card info-card mx-auto">
+                        <div class="card-header">
+                            This will take a few minutes.
+                        </div>
+                        <div class="card-body">
+                            <form action="{% url 'result' %}" class="row">
 
-                        {% csrf_token %}
-                        Gender: <input type="text" required name="Gender" placeholder="Gender"> <br> <br>
-                        Age_group: <input type="text" required name="Age_group" placeholder="Age group"> <br> <br>
-                        City: <input type="text" required name="City" placeholder="City to be visited"> <br> <br>
-                        Travel_With: <input type="text" required name="Travel_With" placeholder="Who are you travelling with"> <br> <br>
-                        Total_female: <input type="text" required name="Total_female" placeholder="Total female travelling with"> <br> <br>
-                        Total_male: <input type="text" required name="Total_male" placeholder="Total male travelling with"> <br> <br>
-                        Purpose_of_Visit: <input type="text" required name="Purpose_of_Visit" placeholder="Purpose of Visit"> <br> <br>
-                        Total_Days: <input type="text" required name="Total_Days" placeholder="Total Visiting Days"> <br> <br>
+                              {% csrf_token %}
+                                <div class="form-group col-6" >
+                                    <label>Gender: </label>
+                                    <input type="text" required 
+                                        name="Gender" placeholder="Gender"
+                                        class="form-control"> 
+                                </div>
 
-                        <input type="submit" name="" value="submit">
+                                <div class="form-group col-6">
+                                    <label>Age_group: </label>
+                                    <input type="text" required 
+                                        name="Age_group" placeholder="Age group"
+                                        class="form-control"> 
+                                </div>
+                                <div class="form-group col-6">
+                                    <label>City: </label>
+                                    <input type="text" required name="City"     
+                                        placeholder="City to be visited"
+                                        class="form-control"> 
+                                </div>
 
-                        </form>
+                                <div class="form-group col-6">
+                                    <label>Travel_With: </label>
+                                    <input type="text" required 
+                                        name="Travel_With" placeholder="Who are you travelling with"
+                                        class="form-control"> 
+                                </div>
+
+                                <div class="form-group col-6">
+                                    <label>Total_female: </label>
+                                    <input type="text" required name="Total_female" 
+                                        placeholder="Total female travelling with"
+                                        class="form-control"> 
+                                </div>
+
+                                <div class="form-group col-6">
+                                    <label>Total_male: </label>
+                                    <input type="text" required name="Total_male" 
+                                        placeholder="Total male travelling with"
+                                        class="form-control">                                 
+                                </div>
+
+                                <div class="form-group col-6">
+                                    <label>Purpose_of_Visit:</label> 
+                                    <input type="text" required name="Purpose_of_Visit" 
+                                        placeholder="Purpose of Visit"
+                                        class="form-control">                                 
+                                </div>
+
+                                <div class="form-group col-6">
+                                    <label>Total_Days:</label> 
+                                    <input type="text" required name="Total_Days" 
+                                        placeholder="Total Visiting Days"
+                                        class="form-control">                                
+                                </div>
+
+                                <!--Submit button-->
+                                <input type="submit" name="" value="submit" class="btn form-btn">
+                                </form>
+
+                        </div>
                     </div>
                 </div>
-    
-                <div class="col-lg-6 text-center py-4 m-auto">
-                <!--Image illustration-->
-                    <img src="{% static 'images/undraw_stranded_traveler_pdbw (2).svg' %}" class="form-img">
-                
-                <div class="block" >
-                    <p class="text-muted" style="padding: 1rem; margin-top: 2px; width: 90%; text-align: center; margin: auto; margin-top: 2rem;">Going to a tourist attraction? Find out how much you are likely to spend there.</p>
-                    <a class="btn btn-outline" href="survey2.html">Survey 2</a> 
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <!--Image illustration-->
+                    <img src="images/undraw_stranded_traveler_pdbw (2).svg" class="form-img">
                 </div>
-                </div>
-
-
             </div><!-- .row close -->
         </div><!-- .container close -->
     </section><!-- #form-section close -->
