@@ -18,7 +18,7 @@ Header section
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  position: relative;
+  position: relatoive;
 }
 #header:before {
   content: "";
@@ -42,7 +42,7 @@ Header section
 }
 
   
-.header-btn{
+.header-btn-1{
   margin: auto;
   align-self: center;
   width: 150px;
@@ -51,17 +51,39 @@ Header section
   border: none;
   color: white;
   box-shadow: 3px 3px;
+  margin-right: 1rem;
 
 }
 
-.header-btn:hover{
+.header-btn-2{
+  margin: auto;
+  align-self: center;
+  width: 150px;
+  margin-bottom: 1rem;
+  border: none;
+  color: white;
+  background-color: rgb(168, 119, 110);
+  box-shadow: 3px 3px;
+
+}
+
+.header-btn-1:hover{
   background-color: rgb(218, 96, 74); 
   border: none;
   color: white;
+  font-weight: bold;
   box-shadow: none;
   box-shadow: none;
 }
 
+.header-btn-2:hover{
+  background-color: rgb(139, 100, 93); 
+  border: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: none;
+  box-shadow: none;
+}
 /****************** ********* ********* ********* ********* *********  
 About section
 *************************** ********* ********* ********* ********* **/
@@ -106,12 +128,11 @@ About section
   font-weight:bold;
   box-shadow: none;
 }
-/*      HERE    TO LINE 146 */
-/*Slideshow*/
+/********************Slideshow*/
 .mySlides{
   display: none;
 }
-/* The dots/bullets/indicators */
+/* The dots indicators */
 .dot {
   height: 15px;
   width: 15px;
@@ -129,24 +150,37 @@ About section
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 4s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 4s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .8} 
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .8} 
   to {opacity: 1}
 }
 
 /****************** ********* ********* ********* ********* *********  
 Form section
 *************************** ********* ********* ********* ********* **/
+.custom-container{
+  background-position: left; 
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+ 
+.survey-bg{
+  background-image: url('../images/undraw_amusement_park_17oe.svg');
+}
+
+.result-bg{
+  background-image: url('../images/undraw_stranded_traveler_pdbw\ \(2\).svg');
+}
 
 .title {
   color: #2E2E2E;
@@ -159,14 +193,23 @@ Form section
 
 .info-card{
   padding:1rem; 
+  padding-bottom: 4rem;
   margin: 3px;
   margin-top: 5rem; 
+  margin-bottom: 5rem; 
   border-bottom: 2px solid rgb(245, 95, 69);
   border-right: 2px solid tomato;
-  background-color: wheat;
-  color: #2E2E2E;
-
+  background-color: rgba(128, 104, 100, 0.801);
 }
+
+.info-card label{
+ color: #E9E9E9; 
+}
+
+.info-card h3{
+  color: #E9E9E9; 
+ }
+ 
 
 .shadow-lg{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -179,9 +222,10 @@ Form section
   padding-top: 5rem;
 }
 .form-img{
-  width: 90%; 
+  width: 100%; 
   padding: 15px;  
-  margin-top: 15px; 
+  margin-top:auto;
+  margin-bottom: auto;
   align-self: center;
 }
 
