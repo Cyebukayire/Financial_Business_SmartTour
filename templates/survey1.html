@@ -12,58 +12,144 @@
         ================================================ -->
 
         <!-- bootstrap.min css -->
-		<link rel="stylesheet" href="{% static 'style/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <!-- Font-awesome.min css -->
-		<link rel="stylesheet" href="{% static 'style/font-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 
-		<link rel="stylesheet" href="{% static 'style/main.css' %}">
+		<link rel="stylesheet" href="{% static 'css/main.css' %}">
 	</head>
 	<body>
-        <a  class="btn btn-default btn-sm header-btn" href="{% url 'home' %}">
+
+    <div class="container-fluid custom-container survey-bg">
+        <a  class="btn btn-default btn-sm header-btn-2" href="{% url 'home' %}">
             Back
         </a>
+        <!--
+        Form section  start
+        ============================= -->
+        <section id="form-section">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-8 col-md-9 col-sm-12 col-xs-12 mx-auto">
+                        <div class="card info-card mx-auto">
+                            <div class="card-header">
+                                This will take a few seconds.
+                            </div>
+                            <div class="card-body">
+                                <form action="{% url 'result' %}" class="row">
 
-    <!--
-    Form section  start
-    ============================= -->
-    <section id="form-section">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-lg-6 mx-auto">
-                    <div class="block border">
-                        <h3 class="title">Lorem, ipsum dolor.<span>Survey1</span> </h3>
-                        <form action="{% url 'result' %}">
+                                {% csrf_token %}
+                                    <div class="form-group col-6" >
+                                        <label>Gender: </label>
+                                        <select name="Gender" required type="text" class="form-control">
+                                            <option value="" disabled selected hidden>-- select --</option>
+                                            <option value="0">Female</option>
+                                            <option value="1">Male</option>
+                                        </select>
+                                    </div>
 
-                        {% csrf_token %}
-                        Gender: <input type="text" required name="Gender" placeholder="Gender"> <br> <br>
-                        Age_group: <input type="text" required name="Age_group" placeholder="Age group"> <br> <br>
-                        City: <input type="text" required name="City" placeholder="City to be visited"> <br> <br>
-                        Travel_With: <input type="text" required name="Travel_With" placeholder="Who are you travelling with"> <br> <br>
-                        Total_female: <input type="text" required name="Total_female" placeholder="Total female travelling with"> <br> <br>
-                        Total_male: <input type="text" required name="Total_male" placeholder="Total male travelling with"> <br> <br>
-                        Purpose_of_Visit: <input type="text" required name="Purpose_of_Visit" placeholder="Purpose of Visit"> <br> <br>
-                        Total_Days: <input type="text" required name="Total_Days" placeholder="Total Visiting Days"> <br> <br>
+                                    <div class="form-group col-6">
+                                        <label>Age_group: </label>
+                                        <select name="Age_group" required type="text" class="form-control">
+                                            <option value="" disabled selected hidden>-- select your age --</option>
+                                            <option value="0">18-25</option>
+                                            <option value="1">26-35</option>
+                                            <option value="2">36-45</option>
+                                            <option value="3">less than 18</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label>City: </label>
+                                        <select name="City" required type="text" class="form-control">
+                                            <option value="" disabled selected hidden>-- select city to visit--</option>
+                                            <option value="0">Abuja</option>
+                                            <option value="1">Bauchi</option>
+                                            <option value="2">Bayelsa</option>
+                                            <option value="3">Cross River</option>
+                                            <option value="4">Delta</option>
+                                            <option value="5">Edo</option>
+                                            <option value="6">Ekiti</option>
+                                            <option value="7">Enugu</option>
+                                            <option value="8">Gombe</option>
+                                            <option value="9">Kaduna</option>
+                                            <option value="10">Kano</option>
+                                            <option value="11">Lagos</option>
+                                            <option value="12">Niger</option>
+                                            <option value="13">Ogun</option>
+                                            <option value="14">Ondo</option>
+                                            <option value="15">Osun</option>
+                                            <option value="16">Oyo</option>
+                                            <option value="17">Rivers</option>
+                                            <option value="18">Sokoto</option>
+                                            <option value="19">Uyo</option>
+                                            <option value="20">Yola</option>
+                                        </select>
+                                    </div>
 
-                        <input type="submit" name="" value="submit">
+                                    <div class="form-group col-6">
+                                        <label>Travel_With: </label>
+                                        <select name="Travel_With" required type="text" class="form-control">
+                                            <option value="" disabled selected hidden>-- select who you are traveling with--</option>
+                                            <option value="0">Alone</option>
+                                            <option value="1">Friends</option>
+                                            <option value="2">Relatives</option>
+                                            <option value="3">Spouse</option>
+                                        </select>                                    
+                                    </div>
 
-                        </form>
+                                    <div class="form-group col-6">
+                                        <label>Total_female: </label>
+                                        <input class="form-control" required name="Total_female" placeholder="-- Input total female --"/>                             
+                                    </div>
+
+                                    <div class="form-group col-6">
+                                        <label>Total_male: </label>
+                                        <input class="form-control" required name="Total_male" placeholder="-- Input total male --"/>
+                                    </div>
+
+                                    <div class="form-group col-6">
+                                        <label>Purpose_of_Visit:</label> 
+     
+                                        <select required name="Purpose_of_Visit" type="text" class="form-control">
+                                            <option value="" disabled selected hidden>-- Select purpose of visit--</option>
+                                            <option value="0">Business,Meeting and conferences</option>
+                                            <option value="1">Class Trip</option>
+                                            <option value="2">Engagement party</option>
+                                            <option value="3">Family event</option>
+                                            <option value="4">Honeymoon</option>
+                                            <option value="5">Leisure and Holidays</option>
+                                            <option value="6">Visiting friends and relatives</option>
+
+                                        </select>                                                    
+                                    </div>
+
+                                    <div class="form-group col-6">
+                                        <label>Total_Days:</label>      
+                                        <input class="form-control" required name="Total_Days" placeholder="-- Input days of stay --"/>                          
+                                    </div>
+
+                                    <div class="form-group col-6">
+                                        <label>Email:</label>      
+                                        <input class="form-control" required name="Email" placeholder="-- Input Email --"/>                          
+                                    </div>
+
+                                    <!--Submit button-->
+                                    <input type="submit" name="" type="text" value="submit" class="btn form-btn">
+                                    </form>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-    
-                <div class="col-lg-6 text-center py-4 m-auto">
-                <!--Image illustration-->
-                    <img src="{% static 'images/undraw_stranded_traveler_pdbw (2).svg' %}" class="form-img">
-                
-                <div class="block" >
-                    <p class="text-muted" style="padding: 1rem; margin-top: 2px; width: 90%; text-align: center; margin: auto; margin-top: 2rem;">Going to a tourist attraction? Find out how much you are likely to spend there.</p>
-                    <a class="btn btn-outline" href="survey2.html">Survey 2</a> 
-                </div>
-                </div>
+
+                </div><!-- .row close -->
+            </div><!-- .container close -->
+        </section><!-- #form-section close -->
 
 
-            </div><!-- .row close -->
-        </div><!-- .container close -->
-    </section><!-- #form-section close -->
+    </div>
+
+
 
     <!--footer-bottom  start
     ============================= -->
@@ -80,3 +166,4 @@
     </footer>
 	</body>
 </html>
+

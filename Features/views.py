@@ -8,6 +8,7 @@ def tourist_attraction(req):
 def result(req):
     rf_model = joblib.load("rf_model.sav")
 
+    #creating a 
     data_ls = []
     data_ls.append(req.GET['Gender'])
     data_ls.append(req.GET['Age_group'])
@@ -17,7 +18,11 @@ def result(req):
     data_ls.append(req.GET['Total_male'])
     data_ls.append(req.GET['Purpose_of_Visit'])
     data_ls.append(req.GET['Total_Days'])
+
+    #Get User's Email
+    email = req.GET['Email']
     
+
     Age_group = {'18-25': 0, '26-35': 1, '36-45': 2, 'less than 18': 3}
     City_Visited = {'Abuja': 0,'Bauchi': 1,'Bayelsa': 2,'Cross River': 3,
                                 'Delta': 4,'Edo': 5,'Ekiti': 6,'Enugu': 7,'Gombe': 8,
@@ -31,23 +36,9 @@ def result(req):
                                     'Leisure and Holidays': 5,'Visiting friends and relatives': 6}
     
     print(data_ls)
-    Data_ls =[]
-    
-    if data_ls[0] in Gender.keys():
-        Data_ls.append(Gender[data_ls[0]])
-    if data_ls[1] in Age_group.keys():
-        Data_ls.append(Age_group[data_ls[1]])
-    if data_ls[2] in City_Visited.keys():
-        Data_ls.append(City_Visited[data_ls[2]])
-    if data_ls[3] in Persons_visited_with.keys():
-        Data_ls.append(Persons_visited_with[data_ls[3]])
-    Data_ls.append(data_ls[4])  
-    Data_ls.append(data_ls[5]) 
-    if data_ls[6] in Purpose_of_Visit.keys():
-        Data_ls.append(Purpose_of_Visit[data_ls[6]])
-    Data_ls.append(data_ls[7])
 
-    print(Data_ls)
+    prediction = rf_model.predict([data_ls])
 
-    prediction = rf_model.predict([Data_ls])
-    return render(req, 'result.html', {'pred':float(prediction[0])})
+    pred_error = 43603 + float(prediction[0])
+
+    return render(req, 'result.html', {'pred':float(prediction[0]), "pred_error":pred_error})
