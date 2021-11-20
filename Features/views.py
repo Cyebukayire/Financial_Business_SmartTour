@@ -39,6 +39,6 @@ def result(req):
 
     prediction = rf_model.predict([data_ls])
 
-    pred_error = 43603 + float(prediction[0])
+    pred_error = 36795 + float(prediction[0])
 
     return render(req, 'result.html', {'pred':float(prediction[0]), "pred_error":pred_error})
